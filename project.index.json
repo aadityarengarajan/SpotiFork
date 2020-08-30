@@ -1,0 +1,12 @@
+{
+	"name" : "SpotiFork",
+	"description" : "WebApp to Fork Spotify Playlists",
+	"created" : "11/9/2020",
+	"completed" : "true",
+	"modules" : ["flask","flask_session","startup","secrets","requests","bs4"],
+	"hosting" : {"hosted" : "true",
+				 "host" : "heroku",
+				 "url" : "sheltered-eyrie-04789.herokuapp.com",
+				 "protocol" : "HTTPS"},
+	"code" : "SP-11092020-202906"
+}
