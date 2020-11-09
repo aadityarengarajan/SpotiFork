@@ -9,11 +9,11 @@ TOKEN_DATA = []
 
 
 def getUser():
-    return getAuth(CLIENT_ID, "{}:{}/callback/".format(CALLBACK_URL, PORT), SCOPE)
+    return getAuth(CLIENT_ID, "{}/callback/".format(CALLBACK_URL), SCOPE)
 
 def getUserToken(code):
     global TOKEN_DATA
-    TOKEN_DATA = getToken(code, CLIENT_ID, CLIENT_SECRET, f"{CALLBACK_URL}:{PORT}/callback/")
+    TOKEN_DATA = getToken(code, CLIENT_ID, CLIENT_SECRET, f"{CALLBACK_URL}/callback/")
  
 def refreshToken(time):
     time.sleep(time)
