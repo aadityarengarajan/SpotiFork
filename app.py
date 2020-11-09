@@ -122,4 +122,5 @@ def fork():
     return render_template('completed.html',session=session)
 
 
-app.run(port=5001)
+if __name__ == "__main__": 
+	app.run(port=5001)
