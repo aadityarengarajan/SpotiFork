@@ -3,3 +3,4 @@ flask_session
 bs4
 html5lib
 requests
+gunicorn
