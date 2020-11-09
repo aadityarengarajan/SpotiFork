@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title> {{session.get('title')}} | SpotiFork</title>
+<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+<style>
+::-moz-selection {
+  background-color: #C3CFE2;
+}
+
+::selection {
+  background-color: #C3CFE2;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#FDFBFB), color-stop(70%, #EBEDEE));
+  background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+}
+
+.text {
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vw;
+  font-family: "Poppins", sans-serif;
+}
+
+</style>
+</head>
+<body>
+<a href="https://open.spotify.com/playlist/{{session.get('newplayname').replace('spotify:playlist:','')}}" target="_blank" class="text"><h1 class="text">VIEW FORKED PLAYLIST</h1></a>
+</body>
+</html>

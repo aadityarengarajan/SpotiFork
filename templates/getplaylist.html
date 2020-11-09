@@ -1,0 +1,85 @@
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  font-family: "BentonSans", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  background-color: #3B2F63;
+  background-image: -webkit-radial-gradient(50% top, rgba(84,90,182,0.6) 0%,rgba(84,90,182,0) 75%),-webkit-radial-gradient(right top, #794aa2 0%,rgba(121,74,162,0) 57%);
+  background-image: radial-gradient( at 50% top, rgba(84,90,182,0.6) 0%,rgba(84,90,182,0) 75%),radial-gradient( at right top, #794aa2 0%,rgba(121,74,162,0) 57%);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  margin: 100px auto;
+  background: transparent;
+  overflow: hidden;
+  border: 2px solid #fff;
+  display: flex;
+}
+
+#toast-btn {
+  display: inline-block;
+  float: left;
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #3B2F63;
+  white-space: no-wrap;
+  font-size: 20px;
+  color: #3B2F63;
+  width: 40%;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#toast-btn:hover {
+  background: #3B2F63;
+  color: #fff;
+}
+
+#textbox {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 0 10px;
+  color: #fff;
+  border-left: 2px solid #fff;
+  width: 60%;
+}
+
+.toast {
+  padding: 15px 20px;
+  color: #fff;
+  background: rgba(0,0,10,0.7);
+  display: inline-block;
+  position: fixed;
+  top: -100px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+</style>
+<p style="align:center;margin: 0 auto;text-align:center;color:white;">Hi {{session.get('name')}}!</p>
+<br><br>
+<form action = "/spotifork/fork" method = "POST">
+<div class="container">
+    <button type="submit" id="toast-btn">Fork Playlist</button>
+  <input type="text" name='playlistlink' id="textbox" placeholder="paste the link of the playlist you want to fork here!"/>
+  </div>
+  </form>
+<p style="align:center;margin: 0 auto;text-align:center;color:white;">Example : <a href="https://open.spotify.com/playlist/1TKBY4oaZIw4EHlPOOuJQ5" style="align:center;margin: 0 auto;text-align:center;color:white;text-decoration:none;"> https://open.spotify.com/playlist/1TKBY4oaZIw4EHlPOOuJQ5</a><br>Click on "Fork Playlist" to submit once you paste your playlist's link</p>
